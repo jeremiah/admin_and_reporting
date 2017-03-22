@@ -8,3 +8,5 @@ admin_and_reporting/
 ├── LICENSE				# license for this repositor
 └── README.md				# README for this repo
 ```
+
+Copyright (C) 2017 GENIVI Alliance
