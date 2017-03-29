@@ -5,7 +5,7 @@ This repo contains;
 ```
 admin_and_reporting/
 ├── git-bare-repo-creation.sh		# script to move and create bare git repos
-├── LICENSE				# license for this repositor
+├── LICENSE				# license for this repository
 └── README.md				# README for this repo
 ```
 
