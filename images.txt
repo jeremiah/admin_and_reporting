@@ -26,4 +26,3 @@ gdp-sdk-dragonboard-410c-virtualbox-image_20170312_202105_(5.0G).tar.gz
 gdp-sdk-qemux86-64-virtualbox-image_20170302_130629_(5.1G).tar.gz
 ubuntu_vm_source.tar.gz
 gdp-sdk-minnowboard-virtualbox-image_20170302_024445_(5.4G).tar.gz
-gdp-sdk-raspberrypi2-virtualbox-image_20170302_010932_(5.2G).tar.gz
