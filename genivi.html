@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<meta http-equiv="Cache-control" content="public">
+<meta name="keywords" content="GENIVI GitHub repositories" />
+<meta name="copyright" content="GENIVI Alliance 2017" />
+<meta name="license" content="Copyright (c) 2017 GENIVI Alliance
+			      Permission is granted to copy, distribute and/or modify this document
+			      under the terms of the GNU Free Documentation License, Version 1.2
+			      or any later version published by the Free Software Foundation;
+			      with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://www.genivi.org/sites/default/files/favicon.png" />
+<html ng-app="g_repos">
+<head>
+  <title>GENIVI Repos at GitHub</title>
+  <link href="./lib/bootstrap.min.css" rel="stylesheet" />
+</head>
+<style>
+  .col-sm-4 { border: .1em solid #999; margin: .1em; background-color: #fffce5;}
+  h2 { background-color: #9781b5; padding: 4px; border-bottom: .2em solid #380b61; }
+  h4 { padding: 4px; margin: 0; border-bottom: .1em solid #a8a697; }
+  h5 { font-size: 1.17em; border-bottom: .05em solid #000; }
+  img.resize { width:40px; height:auto; }
+</style>
+<body>
+  <div class="container-fluid" style="margin: auto; width: 80%;">
+    <div class="row">
+      <img src="https://avatars2.githubusercontent.com/u/9118647?v=4" style="max-width: 60px; max-height: 60px; float: left; margin-right: 2em; margin-top: 2em;">
+      <h1>GENIVI repos at GitHub</h1>
+      <p style="display: inline; float: left;">
+	This page shows all of GENIVI's GitHub repositories for easier browsing and searching, updated nightly. &nbsp;  &nbsp;  &nbsp;  &nbsp;
+	<span ng-controller="repoCtrl">
+	<input placeholder="Search {{totalRepos}} GENIVI repos" ng-model="searchKey" style="border: 1px solid #333; padding: 2px;" size="50";/>
+	</span>
+      </p>
+    </div>
+    <div class="row" ng-controller="repoCtrl">
+      <div class="col-sm-4" ng-repeat="repo in repos | filter:searchKey">
+        <h4><a href="{{repo.html_url}}"><u>{{repo.name}}</u></a>
+	  <span style="float: right; color: #555;">&#9733; {{repo.stargazers_count}} &fork; {{repo.forks}} </span></h4>
+	<h5><i>Description:</i> {{repo.description}}</h5> 
+	<h5><i>Last push:</i> {{repo.pushed_at}}</h5>
+	<div ng-include="'contrib.html'"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./lib/angular.min.js"></script>
+  <script src="./genivi-repos.js"></script>
+  <script>
+    angular.module('g_repos', [])
+    .controller('repoCtrl', RepoCtrl);
+    
+    function RepoCtrl($scope) {
+    $scope.repos = repos;
+    
+    $scope.totalRepos = $scope.repos.length;
+    }
+  </script>
+</body>
+</html>
