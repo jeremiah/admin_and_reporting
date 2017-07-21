@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # SPDX license identifier: MPL-2.0
 
