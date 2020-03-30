@@ -1,8 +1,7 @@
 #!/bin/bash
 
-
 # SPDX-license-identifier: MPL-2.0
-# Copyright (C) 2017, Jeremiah C. Foster <jfoster@luxoft.com>
+# SPDX-FileCopyrightText: © Copyright 2017, Jeremiah C. Foster <jfoster@luxoft.com>
 # This file is part of the GENIVI admin and reporting directory
 
 # This Source Code Form is subject to the terms of the Mozilla Public
